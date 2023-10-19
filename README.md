@@ -4,7 +4,7 @@ Implementation for the EMNLP 2023 paper "**[``Non-autoregressive Streaming Trans
 
 **Abstract**: We introduce a non-autoregressive streaming model for simultaneous translation.
 
-![image](https://github.com/ictnlp/NAST/blob/main/nast.pdf)
+![image](https://github.com/ictnlp/NAST/blob/main/model.png)
 
 **Highlights**: 
 * NAST **outperforms SOTA autoregressive SiMT model across all latency settings** on WMT15 DE-EN dataset.
