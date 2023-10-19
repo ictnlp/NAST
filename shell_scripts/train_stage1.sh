@@ -1,7 +1,7 @@
-exp=test_stage_1
-data_dir=~/dataset/wmt15_deen_distill/data-bin-de-en
-checkpoint_dir=./checkpoints/$exp
-plugin_path=./NAST/NAST
+exp=your_exp_name
+data_dir=/path/to/binarized_data
+checkpoint_dir=/path/to/save_checkpoint
+plugin_path=/path/to/NAST_plugins
 wait_until=0
 
 nohup fairseq-train $data_dir \
@@ -30,4 +30,4 @@ nohup fairseq-train $data_dir \
     --update-freq 4 \
     --save-interval-updates 10000 \
     --keep-interval-updates 5 --keep-last-epochs 5 \
-    --max-update 300000 >> logs/$exp.txt &
+    --max-update 300000 > logs/$exp.txt &

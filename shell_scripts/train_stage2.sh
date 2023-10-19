@@ -1,9 +1,9 @@
-exp=test_stage_2_1
-data_dir=~/dataset/wmt15_deen_distill/data-bin-de-en
-checkpoint_dir=./checkpoints/$exp
-plugin_path=./NAST/NAST
+exp=your_exp_name
+data_dir=/path/to/binarized_data
+checkpoint_dir=/path/to/save_checkpoint
+plugin_path=/path/to/NAST_plugins
 wait_until=0
-pretrain_model_path=~/exp_simul_CTC/checkpoints/simul_ctc_deen_distill_upsample_3_latency_0_glat/average_last_5.pt
+pretrain_model_path=/path/to/pretrained_model
 latency_factor=1.0
 latency_threshold=1.0
 
@@ -35,5 +35,3 @@ nohup fairseq-train $data_dir \
     --save-interval-updates 500 \
     --max-update 10000 > logs/$exp.txt &
 
-#--keep-interval-updates 5 --keep-last-epochs 5 \
-#--use-ngram --ngram-size 2 \

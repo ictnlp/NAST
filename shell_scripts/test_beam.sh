@@ -1,6 +1,6 @@
-average_checkpoint_path=/data/mazhengrui/exp_simul_CTC/model.pt
-data_dir=~/dataset/wmt15_deen_distill/data-bin-de-en
-plugin_path=./NAST/NAST
+average_checkpoint_path=/path/to/checkpoint
+data_dir=/path/to/binarized_data
+plugin_path=/path/to/NAST_plugins
 wait_until=0
 
 python ${plugin_path}/scripts/generate_streaming.py ${data_dir} \
@@ -12,4 +12,4 @@ python ${plugin_path}/scripts/generate_streaming.py ${data_dir} \
     --task translation_ctc_streaming \
     --path ${average_checkpoint_path} \
     --max-tokens 2048 --remove-bpe \
-    --left-pad-source > temp
+    --left-pad-source
